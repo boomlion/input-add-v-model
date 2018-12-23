@@ -14,7 +14,10 @@
     <br>
     <a href="" @click.prevent="mas='toggle'">切换页面</a>
     <component :is="mas">
-
+      <!-- 可以使用 ：is进行绑定
+      也可以使用平时的<com></com>进行绑定然后使用    v-if  和v-else济宁筛选
+      
+      -->
     </component>
   </div>
   <script src="../lib/vue-2.4.0.js"></script>
