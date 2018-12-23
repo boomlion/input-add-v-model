@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+    <br>
+    <input type="checkbox" id="john" value="John" v-model="checkedNames">
+    <br>
+    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+    <br>
+    <span>Checked names: {{ checkedNames }}</span>
+  </div>
+<hr>
+  <div id="app1">
+    <input type="radio" value="age" name="ljj" v-model="ms">
+    <input type="radio" value="name" name="ljj" v-model="ms">
+    <input type="radio" value="address" name="ljj" v-model="ms">
+<br>
+    <span>ms names: {{ ms }}</span>
+
+  </div>
+
+  <script src="../lib/vue-2.4.0.js"></script>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        //利用上面的进行监听me的值，看一下v-model的双向绑定
+        //要利用数组进行，字符串的话会绑定判断，只有true  和false
+        checkedNames:[]
+      }
+    })
+
+    const vm1 = new Vue({
+      el: '#app1',
+      data: {
+        //利用上面的进行监听me的值，看一下v-model的双向绑定
+        //要利用数组进行，字符串的话会绑定判断，只有true  和false
+        ms: 'name'
+      }
+    })
+  </script>
+</body>
+
+</html>
